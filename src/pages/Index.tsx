@@ -154,7 +154,7 @@ const Index = () => {
       <section id="subjects" className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">Наши предметы</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
             {subjects.map((subject) => (
               <Card key={subject.name} className="hover:shadow-lg transition-shadow">
                 <CardHeader>
@@ -164,11 +164,135 @@ const Index = () => {
                   <CardTitle>{subject.name}</CardTitle>
                   <CardDescription>Подготовка к ЕГЭ и ОГЭ</CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <Button className="w-full" variant="outline">Узнать подробнее</Button>
-                </CardContent>
               </Card>
             ))}
+          </div>
+
+          <div className="max-w-5xl mx-auto mt-16">
+            <h3 className="text-3xl font-bold text-center mb-10">Программы курсов</h3>
+            <Accordion type="single" collapsible className="space-y-4">
+              <AccordionItem value="math" className="border rounded-lg px-6">
+                <AccordionTrigger className="hover:no-underline">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center">
+                      <Icon name="Calculator" size={24} />
+                    </div>
+                    <div className="text-left">
+                      <h4 className="text-xl font-bold">Математика</h4>
+                      <p className="text-sm text-muted-foreground">Алгебра, геометрия, математический анализ</p>
+                    </div>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="pt-4">
+                  <div className="space-y-4">
+                    <div>
+                      <h5 className="font-semibold mb-2 flex items-center">
+                        <Icon name="BookOpen" size={18} className="mr-2 text-primary" />
+                        Программа курса
+                      </h5>
+                      <ul className="space-y-2 text-sm text-muted-foreground ml-7">
+                        <li>• Алгебра: уравнения, неравенства, системы</li>
+                        <li>• Функции и графики, производные, интегралы</li>
+                        <li>• Геометрия: планиметрия, стереометрия</li>
+                        <li>• Тригонометрия и комбинаторика</li>
+                        <li>• Задачи повышенной сложности (часть 2 ЕГЭ)</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h5 className="font-semibold mb-2 flex items-center">
+                        <Icon name="Target" size={18} className="mr-2 text-primary" />
+                        Результаты
+                      </h5>
+                      <p className="text-sm text-muted-foreground ml-7">
+                        Средний балл ЕГЭ наших учеников — 85+. Полное понимание всех разделов математики.
+                      </p>
+                    </div>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="physics" className="border rounded-lg px-6">
+                <AccordionTrigger className="hover:no-underline">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center">
+                      <Icon name="Atom" size={24} />
+                    </div>
+                    <div className="text-left">
+                      <h4 className="text-xl font-bold">Физика</h4>
+                      <p className="text-sm text-muted-foreground">Механика, электродинамика, квантовая физика</p>
+                    </div>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="pt-4">
+                  <div className="space-y-4">
+                    <div>
+                      <h5 className="font-semibold mb-2 flex items-center">
+                        <Icon name="BookOpen" size={18} className="mr-2 text-primary" />
+                        Программа курса
+                      </h5>
+                      <ul className="space-y-2 text-sm text-muted-foreground ml-7">
+                        <li>• Механика: кинематика, динамика, законы сохранения</li>
+                        <li>• Молекулярная физика и термодинамика</li>
+                        <li>• Электродинамика: электростатика, магнетизм</li>
+                        <li>• Оптика и волны</li>
+                        <li>• Квантовая и атомная физика</li>
+                        <li>• Решение олимпиадных задач</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h5 className="font-semibold mb-2 flex items-center">
+                        <Icon name="Target" size={18} className="mr-2 text-primary" />
+                        Результаты
+                      </h5>
+                      <p className="text-sm text-muted-foreground ml-7">
+                        Глубокое понимание физических процессов. Уверенное решение задач любой сложности.
+                      </p>
+                    </div>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="chemistry" className="border rounded-lg px-6">
+                <AccordionTrigger className="hover:no-underline">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-orange-100 text-orange-700 flex items-center justify-center">
+                      <Icon name="FlaskConical" size={24} />
+                    </div>
+                    <div className="text-left">
+                      <h4 className="text-xl font-bold">Химия</h4>
+                      <p className="text-sm text-muted-foreground">Органика, неорганика, химические реакции</p>
+                    </div>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="pt-4">
+                  <div className="space-y-4">
+                    <div>
+                      <h5 className="font-semibold mb-2 flex items-center">
+                        <Icon name="BookOpen" size={18} className="mr-2 text-primary" />
+                        Программа курса
+                      </h5>
+                      <ul className="space-y-2 text-sm text-muted-foreground ml-7">
+                        <li>• Общая химия: атомы, молекулы, химические связи</li>
+                        <li>• Неорганическая химия: металлы и неметаллы</li>
+                        <li>• Органическая химия: углеводороды, функциональные группы</li>
+                        <li>• Химические реакции и уравнения</li>
+                        <li>• Окислительно-восстановительные реакции</li>
+                        <li>• Решение задач на растворы и расчеты</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h5 className="font-semibold mb-2 flex items-center">
+                        <Icon name="Target" size={18} className="mr-2 text-primary" />
+                        Результаты
+                      </h5>
+                      <p className="text-sm text-muted-foreground ml-7">
+                        Системное понимание химии. Подготовка к поступлению в медицинские и технические вузы.
+                      </p>
+                    </div>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </section>
