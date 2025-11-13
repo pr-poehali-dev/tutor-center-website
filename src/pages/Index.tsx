@@ -17,11 +17,8 @@ const Index = () => {
 
   const subjects = [
     { name: 'Математика', icon: 'Calculator', color: 'bg-blue-100 text-blue-700' },
-    { name: 'Русский язык', icon: 'BookOpen', color: 'bg-green-100 text-green-700' },
     { name: 'Физика', icon: 'Atom', color: 'bg-purple-100 text-purple-700' },
-    { name: 'Химия', icon: 'FlaskConical', color: 'bg-orange-100 text-orange-700' },
-    { name: 'История', icon: 'Landmark', color: 'bg-amber-100 text-amber-700' },
-    { name: 'Английский', icon: 'MessageSquare', color: 'bg-indigo-100 text-indigo-700' }
+    { name: 'Химия', icon: 'FlaskConical', color: 'bg-orange-100 text-orange-700' }
   ];
 
   const reviews = [
